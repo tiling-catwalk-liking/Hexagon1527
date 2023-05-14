@@ -21,25 +21,6 @@ function Get-NewVMName {
     $Script:VMName = Read-Host -Prompt "Enter Name of New VM"
 }
 
-Get-NewVMName
-
-# Get credentials for new VM
-$Cred = (Get-Credential)
-# Variables for new VM creation
-$PublicIPAddName = $Script:VMName + "-ip"
-$ResourceGroup = 'ResourceGroup1_TrialSub1'
-$Location = 'EastUs2'
-$VirtualNetworkName = 'vnet1'
-$SubnetName = 'subnet1'
-$SecurityGroupName = 'NSG2'
-$VMSKU = 'Standard_B2s'
-$VMImage = 'Win2019Datacenter'
-
-Write-Host "Selected VM Name is: $Script:VMName"
-
-Write-Host "Gonna make $Script:VMName. Please be patient"
-
-# Create VM
 function Create-NewAZVM {
 
     New-AZVM -ResourceGroupName $ResourceGroup `
@@ -54,7 +35,23 @@ function Create-NewAZVM {
     -Credential $Cred
     
 }
+# Prompt for name of new VM
+Get-NewVMName
+# Get credentials for new VM
+$Cred = (Get-Credential)
+# Variables for new VM creation
+$PublicIPAddName = $Script:VMName + "-ip"
+$ResourceGroup = 'ResourceGroup1_TrialSub1'
+$Location = 'EastUs2'
+$VirtualNetworkName = 'vnet1'
+$SubnetName = 'subnet1'
+$SecurityGroupName = 'NSG2'
+$VMSKU = 'Standard_B2s'
+$VMImage = 'Win2019Datacenter'
 
+# These lines are currently to assist in debugging.
+Write-Host "Selected VM Name is: $Script:VMName"
+Write-Host "Gonna make $Script:VMName. Please be patient"
 
-
+# Create VM
 Create-NewAZVM
