@@ -2,7 +2,6 @@
   "Size": "Standard_B2s",
   "Location": "EastUs2",
   "VirtualNetworkName": "vnet1",
-  "PublicIPAddressName": "Test01",
   "Image": "Win2019Datacenter",
   "SubnetName": "subnet1",
   "SecurityGroupName": "NSG2",
