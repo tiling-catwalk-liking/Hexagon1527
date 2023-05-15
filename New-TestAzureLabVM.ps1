@@ -43,7 +43,7 @@ $PublicIPAddName = $Script:VMName + "-ip"
 $Cred = (Get-Credential)
 $PublicIPAddName = $Script:VMName + "-ip"
 # Create Hashtable from JSON
-$URI = 'https://raw.githubusercontent.com/tiling-catwalk-liking/Hexagon1527/JSON-Function/VMParams.json?token=GHSAT0AAAAAACCUISV4C5QNQO4H4XNS4LGUZDCPDHQ'
+$URI = Read-Host -Prompt "Enter URI"
 $VMParams = Invoke-WebRequest -Uri $URI
 $VMParams = ($VMParams).content
 $VMParams = $VMParams | ConvertFrom-Json -AsHashtable
@@ -58,4 +58,4 @@ Write-Host "Selected VM Name is: $Script:VMName"
 Write-Host "Gonna make $Script:VMName. Please be patient."
 
 # Create VM
-#Create-NewAZVM @VMParams
+New-AzVM @VMParams
