@@ -21,20 +21,6 @@ function Get-NewVMName {
     $Script:VMName = Read-Host -Prompt "Enter Name of New VM"
 }
 
-#function Create-NewAZVM {
-
-   #New-AZVM -ResourceGroupName $ResourceGroup `
-    #-Name $Script:VMName `
-    #-Location $Location `
-    #-VirtualNetworkName $VirtualNetworkName `
-    #-SubnetName $SubnetName `
-    #-PublicIpAddressName $PublicIPAddName `
-    #-Image 'Win2019Datacenter' `
-    #-NetworkInterfaceDeleteOption 'Delete' `
-    #-Size $VMSKU `
-    #-Credential $Cred
-    
-#}
 # Prompt for name of new VM
 Get-NewVMName
 #Create Variable for IPAddress
@@ -42,7 +28,7 @@ $PublicIPAddName = $Script:VMName + "-ip"
 # Get credentials for new VM
 $Cred = (Get-Credential)
 $PublicIPAddName = $Script:VMName + "-ip"
-# Create Hashtable from JSON
+# Create Hashtable from JSON. Request JSON URL from Github that contains VM parameters.
 $URI = Read-Host -Prompt "Enter URI"
 $VMParams = Invoke-WebRequest -Uri $URI
 $VMParams = ($VMParams).content
