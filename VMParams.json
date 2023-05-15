@@ -1,5 +1,4 @@
 {
-  "PublicIPAddName": ""$Script:VMName + '-ip'""
   "VMSKU": "Standard_B2s",
   "Location": "EastUs2",
   "VirtualNetworkName": "vnet1",
