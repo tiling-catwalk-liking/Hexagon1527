@@ -2,9 +2,10 @@
   "Size": "Standard_B2s",
   "Location": "EastUs2",
   "VirtualNetworkName": "vnet1",
-  "PublicIPAddName": "Test01",
-  "VMImage": "Win2019Datacenter",
+  "PublicIPAddressName": "Test01",
+  "Image": "Win2019Datacenter",
   "SubnetName": "subnet1",
   "SecurityGroupName": "NSG2",
   "ResourceGroup": "ResourceGroup1_TrialSub1"
+  "NetworkInterfaceDeleteOption": "Delete"
 }
