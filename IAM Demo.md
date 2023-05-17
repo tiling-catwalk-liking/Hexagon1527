@@ -8,7 +8,7 @@
 4. [Configure Duo MFA to protect login to a computer](#configure-duo-mfa-to-protect-login-to-a-computer-4)
 5. [Configure BitWarden to auto-provision/de-provision accounts](#configure-bitwarden-to-auto-provisionde-provision-accounts-5)
 
-#### [Sample Images (Click to jump to sample images)](#sample-images)
+[Demo Video (6m13s)](https://1drv.ms/v/s!AqE0JxmtBbHohW3ng302JXCBnKeh?e=LRI6aT "https://1drv.ms/v/s!AqE0JxmtBbHohW3ng302JXCBnKeh?e=LRI6aT")
 
 
 
@@ -76,29 +76,3 @@
 -Test disabling account
     - Disable the account in AD. This will sync to AAD, and will automatically revoke access to Bitwarden
     - Enable the account in AD. This will sync to AAD, and will automatically restore access to Bitwarden
-
-
-#### Sample Images
----
-Azure resources
-
-![Azure resources](https://github.com/tiling-catwalk-liking/Hexagon1527/blob/8f0937d2444ba7c320ce209c515536771a50f2b4/Images/Screenshot%202023-05-16%20at%202.22.08%20PM.png "Screenshot of Azure resources")
-
----
-VM creation PowerShell script
-
-![PowerShell script - Azure VM creation](https://github.com/tiling-catwalk-liking/Hexagon1527/blob/8f0937d2444ba7c320ce209c515536771a50f2b4/Images/Screenshot%202023-05-16%20at%202.23.16%20PM.png "Screenshot of Powershell script for creation Azure VMs")
-
----
-Configured AD domain
-
-![Configured AD domain](https://github.com/tiling-catwalk-liking/Hexagon1527/blob/8f0937d2444ba7c320ce209c515536771a50f2b4/Images/Screenshot%202023-05-16%20at%202.23.50%20PM.png "Screenshot of a ADUC and Server Manager window")
-
----
-Domain user can access domain joined PC
-
-![Domain joined PC with Domain User logged in](https://github.com/tiling-catwalk-liking/Hexagon1527/blob/8f0937d2444ba7c320ce209c515536771a50f2b4/Images/Screenshot%202023-05-16%20at%202.24.38%20PM.png "Screenshot of a PowerShell window showing computer name and username")
-
----
-
-!
