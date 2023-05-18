@@ -1,4 +1,4 @@
-# ReadMe
+# IAM Demo
 
 This repo contains demo information for setting up a few IAM related systems.
 
